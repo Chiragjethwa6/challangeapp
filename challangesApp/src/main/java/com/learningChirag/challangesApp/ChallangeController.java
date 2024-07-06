@@ -1,5 +1,6 @@
 package com.learningChirag.challangesApp;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -10,11 +11,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/challanges")
 public class ChallangeController {
+    @Autowired
     private ChallangeService challangeService;
 
-    public ChallangeController(ChallangeService challangeService){
-        this.challangeService = challangeService;
-    }
+//    public ChallangeController(ChallangeService challangeService){
+//        this.challangeService = challangeService;
+//    }
 
     @GetMapping
     public ResponseEntity<List<Challange>> getAllChallanges() {

@@ -1,9 +1,21 @@
 package com.learningChirag.challangesApp;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+
+@Entity
 public class Challange {
+    @Id
     private Integer id;
+
+    @Column(name = "challangeMonth")
     private String month;
     private String description;
+
+    public Challange(){
+
+    }
 
     public Challange(Integer id, String month, String description) {
         this.id = id;
