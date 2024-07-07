@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/challanges")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ChallangeController {
     @Autowired
     private ChallangeService challangeService;
