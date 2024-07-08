@@ -18,19 +18,23 @@ function AddChallange({onChallangeAdded}){
     }
 
     return (
-        <div>
-            <form>
-                <div>
-                    <label htmlFor="month">Month</label>
-                    <input type="text" id="month" value={month} onChange={e => setMonth(e.target.value)}></input>
-                </div>
-                <div>
-                    <label htmlFor="description">Description</label>
-                    <textarea id="description" value={description} onChange={e => setDescription(e.target.value)}></textarea>
-                </div>
-                <button onClick={handleSubmit} type="submit">Submit</button>
-            </form>
-            
+        <div className="card my-5">
+            <div className="card-header">
+                Add New Challenge
+            </div>
+            <div className="card-body">
+                <form onSubmit={handleSubmit}>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor="month">Month</label>
+                        <input className="form-control" placeholder="e.g, January" type="text" id="month" value={month} onChange={e => setMonth(e.target.value)}></input>
+                    </div>
+                    <div className="mb-3">
+                        <label className="form-label" htmlFor="description">Description</label>
+                        <textarea className="form-control" placeholder="Describe Challenge" id="description" value={description} onChange={e => setDescription(e.target.value)}></textarea>
+                    </div>
+                    <button className="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import Challange from "./Challange";
 
 function ChallangeList({challanges}){
     return (
-        <div>
+        <div className="list-group">
             {challanges.map(challange => (
                 <Challange key={challange.id} challange={challange} />
             ))}
